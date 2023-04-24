@@ -1,0 +1,9 @@
+<p>Search component</p>
+<input type="text" (input)="onSearchChange($event)">
+<ul>
+  <li *ngFor="let product of searchProducts">
+    <span>{{product.name}}</span>
+    <button class="abp-button" (click)="addProduct($event, product)">+</button>
+  </li>
+</ul>
+

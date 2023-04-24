@@ -1,0 +1,10 @@
+<p>Order component</p>
+<ul>
+  <li *ngFor="let orderItem of order; index as i">
+    <span>
+      {{orderItem.name}}
+      Total price: {{ orderItem.price * orderItem.count }}
+      <button (click)="removeItem($event, orderItem, i)">-</button>
+    </span>
+  </li>
+</ul>
